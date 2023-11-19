@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Pesanan</title>
+
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="css/detail_order.css" />
+
+    <!-- Font Awesome 5.15.4 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="navbar-container">
+      <div class="logo">
+        <a href="index.html"
+          ><img src="img/Logo Putih.png" alt="Seribu Rasa"
+        /></a>
+      </div>
+      <nav class="nav-list" id="drawer">
+        <ul>
+          <li class="nav-item">
+            <a href="menu.html" class="nav-link"><strong>Menu</strong></a>
+          </li>
+          <li class="nav-item">
+            <a href="recommendation.html" class="nav-link"
+              ><strong>Rekomendasi</strong></a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="detail_order.html" class="nav-link"
+              ><strong>Pesan</strong></a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="about_us.html" class="nav-link"
+              ><strong>Tentang Kami</strong></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <a id="hamburger" href="#">☰</a>
+    </header>
+    <!-- End of Header -->
+
+    <main>
+      <!-- Main Content -->
+      <div class="container">
+        <!-- Order List -->
+        <div class="row">
+          <div class="order">
+            <h2>Pesanan Saya</h2>
+            <hr />
+          </div>
+          <div class="scroll">
+            <!-- Card Menu -->
+            <div class="side-bar">
+              <div class="order-menu">
+                <img src="img/Ayam Taliwang.jpg" alt="Ayam Taliwang" />
+                <div class="order-type">
+                  <h3>Ayam Taliwang</h3>
+                  <div class="menu-price">
+                    <p>Rp65.000</p>
+                  </div>
+                  <div class="notes">
+                    <input type="text " placeholder="Catatan Khusus" />
+                  </div>
+                </div>
+                <div class="order-total">
+                  <p class="minus">-</p>
+                  <p class="num" id="total">0</p>
+                  <p class="plus">+</p>
+                </div>
+              </div>
+            </div>
+            <!-- End of Card Menu-->
+
+            <!-- Card Menu -->
+            <div class="side-bar">
+              <div class="order-menu">
+                <img src="img/Ayam Taliwang.jpg" alt="Ayam Taliwang" />
+                <div class="order-type">
+                  <h3>Ayam Taliwang</h3>
+                  <div class="menu-price">
+                    <p>Rp65.000</p>
+                  </div>
+                  <div class="notes">
+                    <input type="text " placeholder="Catatan Khusus" />
+                  </div>
+                </div>
+                <div class="order-total">
+                  <p class="minus">-</p>
+                  <p class="num" id="total">0</p>
+                  <p class="plus">+</p>
+                </div>
+              </div>
+            </div>
+            <!-- End of Card Menu-->
+
+            <!-- Add Order -->
+            <div class="add-order">
+              <h2>Ada pesanan tambahan?</h2>
+              <button id="add">Tambah</button>
+            </div>
+            <!-- End of Order List -->
+          </div>
+        </div>
+
+        <!-- Shipping Information -->
+        <div class="row-content">
+          <div class="content">
+            <h2 class="shipping-info">Informasi Pengiriman</h2>
+            <div class="form">
+              <div class="first-name">
+                <label>Nama Depan</label>
+                <input type="text" required />
+              </div>
+              <div class="last-name">
+                <label>Nama Belakang</label>
+                <input type="text" required />
+              </div>
+              <div class="email">
+                <label>Email</label>
+                <input type="email" required />
+              </div>
+              <div class="no-telp">
+                <label>Nomor Telepon</label>
+                <input
+                  type="text"
+                  id="nomorTelepon"
+                  name="nomorTelepon"
+                  required
+                />
+              </div>
+              <div class="address">
+                <label>Alamat Lengkap</label>
+                <input type="text" required />
+              </div>
+            </div>
+
+            <!-- Total Charge -->
+            <div class="subtotal">
+              <div class="subtotal-item">
+                <div class="subtotal-left">
+                  <p>Subtotal</p>
+                  <p>Biaya Antar</p>
+                  <h3>Total</h3>
+                </div>
+                <div class="subtotal-right">
+                  <p>Rp 65.000</p>
+                  <p>Rp 5000</p>
+                  <h3>Rp 70.000</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Confirmation -->
+            <div class="order-confirm-btn">
+              <button id="konfirmasiBtn">Konfirmasi Pesanan</button>
+            </div>
+            <div id="modal" class="modal">
+              <div class="modal-content">
+                <h1>Terima kasih!</h1>
+                <div class="hr">
+                  <hr class="hr-modal" />
+                </div>
+                <p>Pesanan Anda sedang kami proses.</p>
+                <button class="close-btn" id="tutupBtn">
+                  Kembali ke Beranda
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Shipping Information -->
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- footer -->
+      <footer>
+        <div class="footer-col">
+          <img src="img/Logo Putih.png" alt="Seribu Rasa" />
+          <div class="copyright">
+            <p>Copyright © 2023 Group 23 RevoU</p>
+            <p>All rights reserved</p>
+          </div>
+        </div>
+
+        <div class="footer-col-com">
+          <h3 class="title">Halaman</h3>
+          <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="recommendation.html">Rekomendasi</a></li>
+            <li><a href="order.html">Pesan</a></li>
+            <li><a href="about_us.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="title">Media Sosial</h3>
+          <div class="social-links">
+            <a href="#"
+              ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-linkedin" style="color: #ffffff"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-youtube" style="color: #ffffff"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-facebook" style="color: #ffffff"></i
+            ></a>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+    </main>
+
+    <!-- JavaScript -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
